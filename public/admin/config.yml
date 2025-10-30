@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Data de Publicação", name: "date", widget: "datetime"}
+      - {label: "Autor", name: "author", widget: "string", default: "Heitor Fox"}
+      - {label: "Categoria", name: "category", widget: "select", options: ["Neurocomunicação", "Neurocoaching", "Neuroliderança", "Neuroestratégia", "Inteligência Emocional"]}
+      - {label: "Imagem Destaque", name: "featuredImage", widget: "image"}
+      - {label: "Resumo", name: "excerpt", widget: "text"}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list", default: []}
+      - {label: "Vídeo YouTube", name: "videoUrl", widget: "string", required: false}
+
+  - name: "programas"
+    label: "Programas de Formação"
+    folder: "src/content/programas"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Nome do Programa", name: "title", widget: "string"}
+      - {label: "Subtítulo", name: "subtitle", widget: "string"}
+      - {label: "Duração", name: "duration", widget: "string"}
+      - {label: "Descrição", name: "description", widget: "text"}
+      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Tópicos", name: "topics", widget: "list"}
+      - {label: "Preço (opcional)", name: "price", widget: "string", required: false}
+
+  - name: "testemunhos"
+    label: "Testemunhos"
+    folder: "src/content/testemunhos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Nome", name: "name", widget: "string"}
+      - {label: "Cargo", name: "role", widget: "string"}
+      - {label: "Empresa", name: "company", widget: "string"}
+      - {label: "Testemunho", name: "testimonial", widget: "text"}
+      - {label: "Foto", name: "photo", widget: "image", required: false}
+      - {label: "Vídeo YouTube", name: "videoUrl", widget: "string", required: false}
+      - {label: "Rating (1-5)", name: "rating", widget: "number", min: 1, max: 5, default: 5}
+
+  - name: "portfolio"
+    label: "Portfolio / Casos de Sucesso"
+    folder: "src/content/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título do Projeto", name: "title", widget: "string"}
+      - {label: "Cliente", name: "client", widget: "string"}
+      - {label: "Setor", name: "sector", widget: "string"}
+      - {label: "Descrição", name: "description", widget: "text"}
+      - {label: "Desafio", name: "challenge", widget: "text"}
+      - {label: "Solução CAT™", name: "solution", widget: "text"}
+      - {label: "Resultados", name: "results", widget: "list"}
+      - {label: "Imagens", name: "images", widget: "list", field: {label: "Imagem", name: "image", widget: "image"}}
+      - {label: "Vídeo", name: "videoUrl", widget: "string", required: false}
+
+  - name: "settings"
+    label: "Configurações do Site"
+    files:
+      - label: "Informações Gerais"
+        name: "general"
+        file: "src/content/settings/general.json"
+        fields:
+          - {label: "Nome do Site", name: "siteName", widget: "string"}
+          - {label: "Email de Contacto", name: "email", widget: "string"}
+          - {label: "Telefone", name: "phone", widget: "string"}
+          - {label: "WhatsApp Channel", name: "whatsapp", widget: "string"}
+          - {label: "LinkedIn", name: "linkedin", widget: "string"}
+          - {label: "Facebook", name: "facebook", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
+          - {label: "YouTube", name: "youtube", widget: "string"}
+
