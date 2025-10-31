@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Building2, Users, Award, Target, Heart, Globe, CheckCircle2 } from 'lucide-react'
+import { Building2, Users, Award, Target, Heart, Globe, CheckCircle2, GraduationCap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 
 export default function AboutPage() {
