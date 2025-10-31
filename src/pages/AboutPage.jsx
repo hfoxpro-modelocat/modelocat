@@ -53,53 +53,13 @@ export default function AboutPage() {
       role: 'Comunicação e Relações Institucionais',
       bio: 'Responsável pela comunicação institucional e desenvolvimento de parcerias estratégicas na CPLP.',
       photo: '/images/placeholder-avatar.jpg'
-    },
-    {
-      name: 'IPDD & Kombersu RH',
-      role: 'Validação Pedagógica e Certificação',
-      bio: 'Parceiros institucionais responsáveis pela validação pedagógica e certificação formativa em Cabo Verde.',
-      photo: '/images/placeholder-avatar.jpg'
     }
-  ]
-
-  const conselhoCientifico = [
-    {
-      area: 'Neurociência Aplicada',
-      description: 'Investigação em neurociência aplicada à comunicação e liderança'
-    },
-    {
-      area: 'Psicologia e Coaching Organizacional',
-      description: 'Especialistas em desenvolvimento humano e coaching de alta performance'
-    },
-    {
-      area: 'Sustentabilidade e Ética Aplicada',
-      description: 'Foco em práticas sustentáveis e ética organizacional'
-    },
-    {
-      area: 'Neurotecnologia e IA',
-      description: 'Colaboração com DCG Lab e BrainBox.Center para inovação tecnológica'
-    },
-    {
-      area: 'VCW Lab @ Nova SBE',
-      description: 'Parceria com Prof. Luís Filipe Lages para metodologias de criação de valor e inovação'
-    }
-  ]
-
-  const fundadores = [
-    { name: 'Heitor Fox', year: '1995', role: 'Fundador e CEO' },
-    { name: 'Psicotraining Portugal', year: '2000', role: 'Entidade Formadora' },
-    { name: 'IPDD - Cabo Verde', year: '2015', role: 'Parceiro Institucional' },
-    { name: 'Kombersu RH', year: '2018', role: 'Parceiro RH' },
-    { name: 'A Definir', year: '---', role: 'Co-Fundador' },
-    { name: 'A Definir', year: '---', role: 'Co-Fundador' },
-    { name: 'A Definir', year: '---', role: 'Co-Fundador' }
   ]
 
   return (
     <div className="min-h-screen bg-[#0E0E10] text-white">
       {/* Hero Section com Imagem */}
       <section className="relative h-[60vh] overflow-hidden">
-        {/* Imagem de fundo */}
         <div className="absolute inset-0">
           <img 
             src="/images/team-collaboration-1.jpg" 
@@ -109,7 +69,6 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0E0E10]/80 via-[#0E0E10]/60 to-[#0E0E10]"></div>
         </div>
         
-        {/* Conteúdo */}
         <div className="relative z-10 container mx-auto max-w-6xl h-full flex items-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -122,28 +81,6 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl md:text-2xl text-[#D9D9E0] mb-8">
               Transformamos organizações através da neurociência aplicada, inteligência emocional e liderança consciente.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Conteúdo Principal */}
-      <section className="relative py-24 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img src="/images/workshop-dinamico-1.png" alt="" className="w-full h-full object-cover" />
-        </div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-6xl font-bold mb-6">
-              Sobre <span className="text-[#E2B94B]">Nós</span>
-            </h1>
-            <p className="text-2xl text-[#D9D9E0] max-w-3xl mx-auto">
-              Transformamos organizações através da ciência da comunicação, liderança e emoção
             </p>
           </motion.div>
         </div>
@@ -246,9 +183,9 @@ export default function AboutPage() {
                               href={entity.link} 
                               target="_blank" 
                               rel="noopener noreferrer"
-                              className="text-[#0A7BFF] hover:text-[#E2B94B] transition-colors"
+                              className="text-[#0A7BFF] hover:text-[#E2B94B] transition-colors text-sm"
                             >
-                              {entity.link.replace('https://', '')} →
+                              Visitar website →
                             </a>
                           )}
                         </div>
@@ -262,7 +199,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Equipa - Heitor Fox */}
+      {/* Conselho Estratégico */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <motion.div
@@ -273,137 +210,40 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-12 flex items-center gap-3">
               <Users className="text-[#E2B94B]" size={40} />
-              Equipa
+              Conselho Estratégico
             </h2>
-            
-            <Card className="bg-[#1A1A1D] border-[#2A2A2F]">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <img 
-                      src="/images/hero-heitor-fox.webp" 
-                      alt="Heitor Fox" 
-                      className="rounded-lg shadow-2xl w-full"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-white mb-2">Heitor Fox</h3>
-                    <p className="text-xl text-[#E2B94B] mb-4">Fundador e CEO</p>
-                    <p className="text-sm text-[#9AA0A6] italic mb-6">
-                      It's All About Your Brain "Heart & Soul"
-                    </p>
-                    <p className="text-[#D9D9E0] mb-4">
-                      Com mais de 30 anos de experiência internacional, Heitor Fox é especialista em Neurocomunicação, Neurocoaching e Neuroliderança. Co-autor do Modelo CAT™, trabalha com organizações em Portugal, Cabo Verde e Angola, transformando líderes e equipas através da ciência aplicada à comunicação e à emoção.
-                    </p>
-                    <p className="text-[#D9D9E0] mb-6">
-                      A sua abordagem integra ferramentas como PDA International, VCW (Nova SBE), Neuromap™, Golden Circle (Simon Sinek), MyPDA Coach, VCW Sprint e metodologias de inteligência emocional, sempre com foco em resultados mensuráveis e mudança sustentável.
-                    </p>
-                    <div className="flex gap-4">
-                      <a 
-                        href="https://www.heitorfox.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 bg-[#E2B94B] text-black rounded-lg hover:bg-[#E2B94B]/80 transition-colors"
-                      >
-                        heitorfox.com
-                      </a>
-                      <a 
-                        href="https://psicotraining.pt" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 border border-[#E2B94B] text-[#E2B94B] rounded-lg hover:bg-[#E2B94B]/10 transition-colors"
-                      >
-                        psicotraining.pt
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Governança */}
-      <section className="py-20 px-4 bg-[#1A1A1D]">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-12 flex items-center gap-3">
-              <Award className="text-[#E2B94B]" size={40} />
-              Governança
-            </h2>
-
-            {/* Conselho Estratégico */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold text-[#E2B94B] mb-8">Conselho Estratégico</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {conselho.map((membro, idx) => (
-                  <Card key={idx} className="bg-[#0E0E10] border-[#2A2A2F] hover:border-[#E2B94B]/50 transition-all">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {conselhoEstrategico.map((member, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="bg-[#1A1A1D] border-[#2A2A2F] hover:border-[#E2B94B]/50 transition-all h-full">
                     <CardContent className="p-6 text-center">
-                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#E2B94B] to-[#0A7BFF] p-1">
-                        <div className="w-full h-full rounded-full bg-[#1A1A1D] flex items-center justify-center">
-                          <Users className="text-[#E2B94B]" size={32} />
-                        </div>
+                      <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-[#2A2A2F]">
+                        <img 
+                          src={member.photo} 
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <h4 className="text-lg font-bold text-white mb-1">{membro.name}</h4>
-                      <p className="text-sm text-[#E2B94B] mb-3">{membro.role}</p>
-                      <p className="text-sm text-[#9AA0A6]">{membro.bio}</p>
+                      <h3 className="text-xl font-bold text-[#E2B94B] mb-2">{member.name}</h3>
+                      <p className="text-sm text-[#0A7BFF] mb-3">{member.role}</p>
+                      <p className="text-[#D9D9E0] text-sm">{member.bio}</p>
                     </CardContent>
                   </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Conselho Científico */}
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold text-[#0A7BFF] mb-4">Conselho Científico</h3>
-              <p className="text-[#D9D9E0] mb-8">
-                Órgão de validação científica e metodológica da certificação internacional, garantindo rigor, inovação e sustentabilidade epistemológica do Modelo CAT™.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                {conselhoCientifico.map((area, idx) => (
-                  <Card key={idx} className="bg-[#0E0E10] border-[#2A2A2F] hover:border-[#0A7BFF]/50 transition-all">
-                    <CardContent className="p-6">
-                      <h4 className="text-lg font-bold text-[#0A7BFF] mb-2">{area.area}</h4>
-                      <p className="text-sm text-[#9AA0A6]">{area.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Fundadores */}
-            <div>
-              <h3 className="text-2xl font-bold text-[#E2B94B] mb-8">Fundadores</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {fundadores.map((fundador, idx) => (
-                  <Card key={idx} className="bg-[#0E0E10] border-[#2A2A2F]">
-                    <CardContent className="p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-full bg-[#E2B94B]/10 flex items-center justify-center flex-shrink-0">
-                          <span className="text-[#E2B94B] font-bold">{fundador.year}</span>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-white">{fundador.name}</h4>
-                          <p className="text-sm text-[#9AA0A6]">{fundador.role}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Fundamentação Científica */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-[#1A1A1D]">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -418,54 +258,50 @@ export default function AboutPage() {
             <p className="text-[#D9D9E0] mb-12 text-lg">
               O Modelo CAT™ é fundamentado em investigação científica rigorosa e nas contribuições de autores de referência mundial em neurociência, liderança e inteligência emocional.
             </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  author: 'Daniel Goleman',
-                  area: 'Inteligência Emocional',
-                  contribution: 'A inteligência emocional é essencial para liderar e inspirar mudanças. Base fundamental do Modelo CAT™.',
-                  reference: 'Emotional Intelligence (1995)'
-                },
-                {
-                  author: 'António Damásio',
-                  area: 'Neurociência Aplicada',
-                  contribution: 'O ser humano e a organização como um todo – mente, emoção e comportamento – interligados para criar impacto sustentável.',
-                  reference: 'Descartes\' Error (1994)'
-                },
-                {
-                  author: 'Peter Senge',
-                  area: 'Organizações que Aprendem',
-                  contribution: 'As organizações que prosperam são aquelas que aprendem. Sustentabilidade Ativa como alicerce do programa.',
-                  reference: 'The Fifth Discipline (1990)'
-                },
-                {
-                  author: 'David Rock',
-                  area: 'Neurocoaching',
-                  contribution: 'Técnicas fundamentadas na neuroplasticidade para romper barreiras e atingir metas. Alinhamento entre quem somos e quem podemos ser.',
-                  reference: 'Your Brain at Work (2009)'
-                },
-                {
-                  author: 'Christophe Morin & Patrick Renvoisé',
-                  area: 'Neurocomunicação',
-                  contribution: 'Como o cérebro processa mensagens emocionais, criando conexões autênticas que mobilizam equipas.',
-                  reference: 'The Persuasion Code (2018)'
-                },
-                {
-                  author: 'Luís Filipe Lages',
-                  area: 'Value Creation Wheel (VCW)',
-                  contribution: 'Metodologia científica reconhecida internacionalmente aplicada em contextos de inovação, liderança e transformação organizacional.',
-                  reference: 'Nova SBE - VCW Lab'
-                }
-              ].map((ref, idx) => (
-                <Card key={idx} className="bg-[#1A1A1D] border-[#2A2A2F] hover:border-[#E2B94B]/50 transition-all">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-[#E2B94B] mb-2">{ref.author}</h3>
-                    <p className="text-sm text-[#0A7BFF] mb-3">{ref.area}</p>
-                    <p className="text-[#D9D9E0] mb-3 text-sm">{ref.contribution}</p>
-                    <p className="text-xs text-[#9AA0A6] italic">{ref.reference}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-[#0E0E10] border-[#2A2A2F]">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-[#E2B94B] mb-2">Daniel Goleman</h3>
+                  <p className="text-sm text-[#0A7BFF] mb-3">Inteligência Emocional</p>
+                  <p className="text-[#D9D9E0] mb-3 text-sm">
+                    A inteligência emocional é essencial para liderar e inspirar mudanças. Base fundamental do Modelo CAT™.
+                  </p>
+                  <p className="text-xs text-[#9AA0A6] italic">Emotional Intelligence (1995)</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-[#0E0E10] border-[#2A2A2F]">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-[#E2B94B] mb-2">António Damásio</h3>
+                  <p className="text-sm text-[#0A7BFF] mb-3">Neurociência Aplicada</p>
+                  <p className="text-[#D9D9E0] mb-3 text-sm">
+                    O ser humano e a organização como um todo – mente, emoção e comportamento – interligados para criar impacto sustentável.
+                  </p>
+                  <p className="text-xs text-[#9AA0A6] italic">Descartes' Error (1994)</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-[#0E0E10] border-[#2A2A2F]">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-[#E2B94B] mb-2">Simon Sinek</h3>
+                  <p className="text-sm text-[#0A7BFF] mb-3">Liderança Inspiradora</p>
+                  <p className="text-[#D9D9E0] mb-3 text-sm">
+                    Começar pelo "porquê" transforma a forma como comunicamos e lideramos. Golden Circle integrado no Modelo CAT™.
+                  </p>
+                  <p className="text-xs text-[#9AA0A6] italic">Start with Why (2009)</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-[#0E0E10] border-[#2A2A2F]">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-[#E2B94B] mb-2">Brené Brown</h3>
+                  <p className="text-sm text-[#0A7BFF] mb-3">Vulnerabilidade e Coragem</p>
+                  <p className="text-[#D9D9E0] mb-3 text-sm">
+                    A vulnerabilidade é o berço da inovação, criatividade e mudança. Essencial para liderança autêntica.
+                  </p>
+                  <p className="text-xs text-[#9AA0A6] italic">Daring Greatly (2012)</p>
+                </CardContent>
+              </Card>
             </div>
           </motion.div>
         </div>
